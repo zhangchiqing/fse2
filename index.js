@@ -83,3 +83,11 @@ exports.setLastModDate = function(date, filePath) {
   return fs.utimesAsync(filePath, date, date);
 };
 
+// Buffer | String -> FilePath -> Promise void
+exports.mkdirpThenWriteFile = function(file, filepath) {
+  var dirname = PS.dirname(filepath);
+  return exports.mkdirpIfNotExist(dirname)
+  .then(function() {
+    return fs.writeFileAsync(file, filepath);
+  });
+};
