@@ -1,6 +1,6 @@
 {
   "name": "fse2",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "fs extra with Promises",
   "main": "index.js",
   "dependencies": {
@@ -26,7 +26,8 @@
     "mkdir",
     "folderExists",
     "rmrfdir",
-    "cp"
+    "cp",
+    "mkdirpThenWriteFile"
   ],
   "author": "Leo Zhang (zhangchiqing@gmail.com)",
   "license": "MIT",
